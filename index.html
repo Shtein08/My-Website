@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Адаптивный Сайт</title>
+    <!-- Подключаем наш файл стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Мой Проект</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+					<li><a href="#" id="openGameButton">Играть</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Добро пожаловать на мой адаптивный сайт!</h2>
+                <p>Здесь вы найдете информацию о нашем удивительном проекте.</p>
+                <img src="dog.jpg"  width="150" height="150"
+alt="Изображение собаки" class="hero-image">
+				<p>Это собака кстати</p>
+                <!--<button class="btn" href="http://t.me/yurseve" >Узнать больше</button> -->
+<form  action="http://t.me/yurseve">
+    <input class="btn" type="submit" value="Узнать больше" />
+</form>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h3>О нас</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Наша Миссия</h4>
+                        <p>Мы стремимся создавать простые и эффективные решения для наших клиентов.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Наша История</h4>
+                        <p>Начали как маленький стартап и выросли в дружную команду профессионалов.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Наши Ценности</h4>
+                        <p>Инновации, качество и клиентоориентированность - наши главные принципы.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h3>Наши Услуги</h3>
+                <ul class="service-list">
+                    <li>Веб-разработка</li>
+                    <li>Мобильные приложения</li>
+                    <li>Дизайн интерфейсов</li>
+                    <li>Консалтинг</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h3>Свяжитесь с нами</h3>
+                <p>Есть вопросы? Напишите нам на <a href="mailto:info@example.com">info@example.com</a></p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="email" placeholder="Ваш Email">
+                    <textarea placeholder="Ваше сообщение"></textarea>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Мой Адаптивный Сайт. Все права защищены.</p>
+        </div>
+    </footer>
+	
+	 <!-- Модальное окно для игры -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Игра Змейка</h3>
+            <canvas id="snakeCanvas" width="300" height="300"></canvas>
+            <p>Счет: <span id="scoreDisplay">0</span></p>
+            <p id="gameOverMessage" class="game-message">Нажмите "Начать игру" для старта.</p>
+            <button id="startGameButton" class="btn">Начать игру</button>
+        </div>
+    </div>
+
+    <!-- Подключаем наш файл скриптов -->
+    <script src="script.js"></script>
+</body>
+</html>

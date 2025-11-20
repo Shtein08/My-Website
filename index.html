@@ -30,7 +30,10 @@
                 <img src="dog.jpg"  width="150" height="150"
 alt="Изображение собаки" class="hero-image">
 				<p>Это собака кстати</p>
-                <button class="btn" href="http://t.me/" >Узнать больше</button>
+                <!--<button class="btn" href="http://t.me/yurseve" >Узнать больше</button> -->
+<form  action="http://t.me/yurseve">
+    <input class="btn" type="submit" value="Узнать больше" />
+</form>
             </div>
         </section>
 
@@ -95,11 +98,17 @@ alt="Изображение собаки" class="hero-image">
             <p>Счет: <span id="scoreDisplay">0</span></p>
             <p id="gameOverMessage" class="game-message">Нажмите "Начать игру" для старта.</p>
             <button id="startGameButton" class="btn">Начать игру</button>
+    <!-- Кнопки управления для мобильных устройств -->
+            <div class="game-controls">
+                <button class="control-btn" id="upButton">⬆️</button>
+                <div class="middle-controls">
+                    <button class="control-btn" id="leftButton">⬅️</button>
+                    <button class="control-btn" id="downButton">⬇️</button>
+                    <button class="control-btn" id="rightButton">➡️</button>
         </div>
     </div>
 
     <!-- Подключаем наш файл скриптов -->
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
-

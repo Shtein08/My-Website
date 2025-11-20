@@ -314,6 +314,45 @@ footer p {
     margin-top: 15px;
 }
 
+/* --- Стили для кнопок управления игрой --- */
+.game-controls {
+    display: flex;
+    flex-direction: column; /* Располагаем вверх-вниз */
+    align-items: center;
+    margin-top: 20px;
+    user-select: none; /* Предотвращает выделение текста на кнопках */
+}
+
+.middle-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Занимаем всю ширину для центрирования */
+    margin-top: 10px; /* Отступ от верхней кнопки */
+}
+
+.control-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 5px; /* Небольшие отступы между кнопками */
+    width: 70px; /* Фиксированная ширина для квадрата */
+    height: 70px; /* Фиксированная высота для квадрата */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.control-btn:active {
+    background-color: #2980b9;
+    transform: scale(0.95); /* Небольшое сжатие при нажатии */
+}
+
 /* Адаптивность: медиа-запросы для больших экранов */
 @media (min-width: 768px) {
     header .container {
@@ -346,6 +385,10 @@ footer p {
         grid-template-columns: repeat(2, 1fr); /* Две колонки для услуг */
         gap: 15px;
     }
+    .game-controls {
+        display: none; /* Скрываем кнопки на больших экранах, т.к. есть клавиатура */
+    }
+
 }
 
 @media (min-width: 1024px) {
